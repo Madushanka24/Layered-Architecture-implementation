@@ -1,0 +1,19 @@
+module com.example.layeredarchitecture {
+    requires javafx.controls;
+    requires javafx.fxml;
+    requires com.jfoenix;
+    requires java.sql;
+
+    opens lk.ijse.layeredarchitecture to javafx.fxml;
+    opens lk.ijse.layeredarchitecture.controller to javafx.fxml;
+    opens lk.ijse.layeredarchitecture.view.tdm to javafx.base;
+
+    exports lk.ijse.layeredarchitecture;
+    exports lk.ijse.layeredarchitecture.controller;
+    exports lk.ijse.layeredarchitecture.DAO;
+    opens lk.ijse.layeredarchitecture.DAO to javafx.fxml;
+    exports lk.ijse.layeredarchitecture.DAO.Custom;
+    opens lk.ijse.layeredarchitecture.DAO.Custom to javafx.fxml;
+    exports lk.ijse.layeredarchitecture.DAO.Custom.Impl;
+    opens lk.ijse.layeredarchitecture.DAO.Custom.Impl to javafx.fxml;
+}
